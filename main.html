@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css"/>
+    <script src="static/data.js" defer></script>
+    <script src="resume-classes/about-me.js" defer></script>
+    <script src="resume-classes/education.js" defer></script>
+    <script src="resume-classes/work.js" defer></script>
+    <script src="resume-classes/skill.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="title">
+            Resume Maker
+        </div>
+        <div id="menu-buttons">
+            <button id="contact-info-button" data-selected="true">Contact Info</button>
+            <button id="education-button" data-selected="false">Education</button>
+            <button id="work-experience-button" data-selected="false">Work Experience</button>
+            <button id="skills-button" data-selected="false">Skills</button>
+        </div>
+        <div class="menu-forms-div">
+            <div class="center-div">
+                <form id="contact-info-form">
+                    <div id="flexbox-contact-info">
+                        <div>
+                            <div><label>
+                                    Name:<input type="text" id="name" value="Katie"></input>
+                                </label></div>
+                            <div><label>
+                                    Image URL:<input type="text" id="image-url"
+                                        value="https://media.licdn.com/dms/image/v2/D5603AQGPfM5QBUvkHg/profile-displayphoto-shrink_400_400/B56ZVOMRZWGsAs-/0/1740773595025?e=1747267200&v=beta&t=_m_1DZTDXGkLYoyNjeo_6MVCnQIhBADfHg6pnvDMAEA"></input>
+                                </label></div>
+                            <div><label>
+                                    Email Address:<input type="text" id="email-address" value="email@gmail.com"></input>
+                                </label></div>
+                            <div><label>
+                                    Phone Number:<input type="text" id="phone-number" value="801-123-4567"></input>
+                                </label></div>
+                        </div>
+                        <div>
+                            <div><label>
+                                    Street:<input type="text" id="street" value="246 Clover Ln"></input>
+                                </label></div>
+                            <div><label>
+                                    City:<input type="text" id="city" value="Oakland"></input>
+                                </label></div>
+                            <div><label>
+                                    State:<input type="text" id="state" value="Ohio"></input>
+                                </label></div>
+                            <div><label>
+                                    Zipcode:<input type="text" id="zipcode" value="30443"></input>
+                                </label></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="center-div">
+                <form id="education-info-form" hidden="true">
+                    <div><label>
+                            School Logo URL:<input type="text" id="school-logo-url"></input>
+                        </label></div>
+                    <div><label>
+                            School Name:<input type="text" id="school-name"></input>
+                        </label></div>
+                    <div><label>
+                            Graduation Date:<input type="text" id="graduation-date"></input>
+                        </label></div>
+                    <div><label>
+                            Degree:<input type="text" id="degree"></input>
+                        </label></div>
+                    <div><label>
+                            Field of Study:<input type="text" id="field-of-study"></input>
+                        </label></div>
+                    <div class="center-div">
+                        <button>Add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="center-div">
+                <form id="work-info-form" hidden="true">
+                    <div><label>
+                            Company Name:<input type="text" id="company-name"></input>
+                        </label></div>
+                    <div><label>
+                            Job Title:<input type="text" id="job-title"></input>
+                        </label></div>
+                    <div><label>
+                            Start Date:<input type="text" id="start-date"></input>
+                        </label></div>
+                    <div><label>
+                            End Date:<input type="text" id="end-date" placeholder="Present"></input>
+                        </label></div>
+                    <div><label>
+                            Responsibilities:<input type="text" id="responsibilities"></input>
+                        </label></div>
+                    <div class="center-div">
+                        <button>Add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="center-div">
+                <form id="skills-info-form" hidden="true">
+                    <div><label>
+                            Skill name:<input type="text" id="skill-name"></input>
+                        </label></div>
+                    <div>
+                        Skill Proficiency:<select id="skill-proficiency">
+                            <option value="novice">Novice</option>
+                            <option value="proficient">Proficient</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                    <div class="center-div"> <button>Add</button></div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="paper">
+            <h1>About Me</h1>
+            <div class="resume-info" id="about-me-section">
+                <div></div>
+            </div>
+            <h1>Education</h1>
+            <div class="resume-info" id="education-section">
+            </div>
+            <h1>Work Experience</h1>
+            <div class="resume-info" id="work-section">
+            </div>
+            <h1>Skills</h1>
+            <div class="resume-info" id="skills-section">
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

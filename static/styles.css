@@ -1,0 +1,201 @@
+:root {
+    --background-color: #DADAE2;
+    --primary-color: #505168;
+    --secondary-color: #a5a5b6;
+    --dark-color: #27233A;
+    --light-text: #DADAE2;
+}
+
+@font-face {
+    font-family: DM_Serif;
+    src: url(../fonts/DM_Serif_Text/DMSerifText-Regular.ttf);
+}
+
+@font-face {
+    font-family: Hind;
+    src: url(../fonts/Hind_Madurai/HindMadurai-Regular.ttf);
+}
+
+html {
+    margin: 0px;
+}
+
+body {
+    font-family: DM_Serif;
+    margin: 0px;
+    background-color: var(--secondary-color);
+}
+
+h1 {
+    font-size: 1.5em;
+    color: var(--dark-color);
+    /* background-color: var(--secondary-color);
+    padding: 0px 12px;
+    border-radius: 20px; */
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    text-align: center;
+    font-size: 2.2em;
+    padding: 12px;
+    color: var(--light-text);
+    background-color: var(--dark-color);
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 4px;
+}
+
+#menu-buttons {
+    display: flex;
+    justify-content: center;
+    font-family: DM_Serif;
+ 
+}
+
+button {
+    font-family: DM_Serif;
+    border-style: hidden;
+    border-radius: 20px;
+    padding: 4px 16px 4px 16px;
+    margin: 8px 3px 0px 3px;
+}
+
+button[data-selected="true"] {
+    background-color: var(--light-text);
+}
+
+button[data-selected="false"] {
+    background-color: var(--secondary-color);
+}
+
+form {
+    color: var(--light-text);
+    text-align: right;
+}
+
+input, select {
+    font-family: DM_Serif;
+    margin-left: 8px;
+    margin-top: 6px;
+    margin-right: 8px;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+#paper {
+    margin-top: 324px;
+    margin-left: 24px;
+    margin-bottom: 36px;
+    padding: 16px;
+    width: 80%;
+    height: auto;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    color: var(--dark-color)
+}
+
+#flexbox-contact-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume-info {
+    font-family: Hind;
+}
+
+#about-me-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-me-card {
+    width: 240px;
+    height: auto;
+}
+
+#education-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.education-card {
+    height: 296px;
+    padding: 12px;
+    width: 13.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.image-flex-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#work-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-card{
+    padding: 12px;
+}
+
+#skills-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill-card {
+    padding: 6px 16px 6px 16px;
+    margin: 10px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: var(--light-text);
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.company-header {
+    display: flex;
+    justify-content: space-between;
+}

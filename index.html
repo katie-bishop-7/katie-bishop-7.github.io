@@ -4,12 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles.css"/>
-    <script src="static/data.js" defer></script>
-    <script src="resume-classes/about-me.js" defer></script>
-    <script src="resume-classes/education.js" defer></script>
-    <script src="resume-classes/work.js" defer></script>
-    <script src="resume-classes/skill.js" defer></script>
+    <link rel="stylesheet" href="static/styles.css" />
     <script src="main.js" defer></script>
     <title>Document</title>
 </head>
@@ -17,131 +12,174 @@
 <body>
     <div id="menu">
         <div id="title">
-            Resume Maker
+            Katie Bishop Resume
         </div>
         <div id="menu-buttons">
-            <button id="contact-info-button" data-selected="true">Contact Info</button>
+            <button id="contact-info-button" data-selected="true">About Me</button>
+            <button id="projects-button" data-selected="false">Projects</button>
+            <button id="skills-button" data-selected="false">Skills</button>
             <button id="education-button" data-selected="false">Education</button>
             <button id="work-experience-button" data-selected="false">Work Experience</button>
-            <button id="skills-button" data-selected="false">Skills</button>
-        </div>
-        <div class="menu-forms-div">
-            <div class="center-div">
-                <form id="contact-info-form">
-                    <div id="flexbox-contact-info">
-                        <div>
-                            <div><label>
-                                    Name:<input type="text" id="name" value="Katie"></input>
-                                </label></div>
-                            <div><label>
-                                    Image URL:<input type="text" id="image-url"
-                                        value="https://media.licdn.com/dms/image/v2/D5603AQGPfM5QBUvkHg/profile-displayphoto-shrink_400_400/B56ZVOMRZWGsAs-/0/1740773595025?e=1747267200&v=beta&t=_m_1DZTDXGkLYoyNjeo_6MVCnQIhBADfHg6pnvDMAEA"></input>
-                                </label></div>
-                            <div><label>
-                                    Email Address:<input type="text" id="email-address" value="email@gmail.com"></input>
-                                </label></div>
-                            <div><label>
-                                    Phone Number:<input type="text" id="phone-number" value="801-123-4567"></input>
-                                </label></div>
-                        </div>
-                        <div>
-                            <div><label>
-                                    Street:<input type="text" id="street" value="246 Clover Ln"></input>
-                                </label></div>
-                            <div><label>
-                                    City:<input type="text" id="city" value="Oakland"></input>
-                                </label></div>
-                            <div><label>
-                                    State:<input type="text" id="state" value="Ohio"></input>
-                                </label></div>
-                            <div><label>
-                                    Zipcode:<input type="text" id="zipcode" value="30443"></input>
-                                </label></div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="center-div">
-                <form id="education-info-form" hidden="true">
-                    <div><label>
-                            School Logo URL:<input type="text" id="school-logo-url"></input>
-                        </label></div>
-                    <div><label>
-                            School Name:<input type="text" id="school-name"></input>
-                        </label></div>
-                    <div><label>
-                            Graduation Date:<input type="text" id="graduation-date"></input>
-                        </label></div>
-                    <div><label>
-                            Degree:<input type="text" id="degree"></input>
-                        </label></div>
-                    <div><label>
-                            Field of Study:<input type="text" id="field-of-study"></input>
-                        </label></div>
-                    <div class="center-div">
-                        <button>Add</button>
-                    </div>
-                </form>
-            </div>
-            <div class="center-div">
-                <form id="work-info-form" hidden="true">
-                    <div><label>
-                            Company Name:<input type="text" id="company-name"></input>
-                        </label></div>
-                    <div><label>
-                            Job Title:<input type="text" id="job-title"></input>
-                        </label></div>
-                    <div><label>
-                            Start Date:<input type="text" id="start-date"></input>
-                        </label></div>
-                    <div><label>
-                            End Date:<input type="text" id="end-date" placeholder="Present"></input>
-                        </label></div>
-                    <div><label>
-                            Responsibilities:<input type="text" id="responsibilities"></input>
-                        </label></div>
-                    <div class="center-div">
-                        <button>Add</button>
-                    </div>
-                </form>
-            </div>
-            <div class="center-div">
-                <form id="skills-info-form" hidden="true">
-                    <div><label>
-                            Skill name:<input type="text" id="skill-name"></input>
-                        </label></div>
-                    <div>
-                        Skill Proficiency:<select id="skill-proficiency">
-                            <option value="novice">Novice</option>
-                            <option value="proficient">Proficient</option>
-                            <option value="expert">Expert</option>
-                        </select>
-                    </div>
-                    <div class="center-div"> <button>Add</button></div>
-
-                </form>
-            </div>
+            <button id="volunteer-button" data-selected="false">Volunteer/Leadership</button>
         </div>
     </div>
+
     <div id="container">
         <div id="paper">
-            <h1>About Me</h1>
+            <h1 id="about-me">About Me</h1>
             <div class="resume-info" id="about-me-section">
-                <div></div>
+                <div class="flex-row row-vert-center">
+                    <img id="profile-picture" src="static/professionalpic.jpg" alt="Portrait of Katie">
+                    <div class="flex-column container">
+                        <div id="about-me-container">
+                            <h2>Katie Bishop</h2>
+                            <div id="bio-container">
+                                I'm an aspiring software developer with experience in Python, Java,
+                                JavaScript and a strong foundation in object-oriented programming. Feel free to
+                                check
+                                out my projects below!
+                            </div>
+                            <div><b>Email Address:</b> katiebishop207@gmail.com</div>
+                            <div><b>LinkedIn: </b><a
+                                    href="https://www.linkedin.com/in/katie-bishop1/">https://www.linkedin.com/in/katie-bishop1/</a>
+                            </div>
+                            <div><b>GitHub: </b><a
+                                    href="https://www.github.com/katie-bishop-7">https://github.com/katie-bishop-7</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-            <h1>Education</h1>
-            <div class="resume-info" id="education-section">
+
+            <h1 id="projects">Projects</h1>
+            <div class="resume-info" id="project-section">
+                <h3><a href="https://katie-bishop-7.github.io/Movie-Database/">Movie Database</a></h3>
+                <div class="resume-info">
+                    <div>An application to find new movies. Movies, actors, and TV show information from the TMDB
+                        database through an API.</div>
+                    <div>Languages: HTML, CSS, JavaScript</div>
+                </div>
+                <h3><a>Favorite Photos Finder</a></h3>
+                <div class="resume-info">
+                    <div>Generate random photos from the Lorem Picsum API. Users can save, view, and remove images
+                        from their gallery. </div>
+                    <div>Languages: HTML, CSS, Python, JavaScript</div>
+                    <h3><a>Wedding Planner</a></h3>
+                    <div class="resume-info">
+                        <div>A fully functional wedding planner built in Excel. User is able to create a guest list,
+                            select vendors, set a budget, create a todo list, and plan all aspects of a wedding.</div>
+                        <div>Languages: Excel</div>
+                    </div>
+                </div>
+
             </div>
-            <h1>Work Experience</h1>
-            <div class="resume-info" id="work-section">
-            </div>
-            <h1>Skills</h1>
+
+            <h1 id="skills">Skills</h1>
             <div class="resume-info" id="skills-section">
+                <div class="flex-column">
+                    <div><b>Proficient in:</b> Python, Java, Excel</div>
+                    <div><b>Experience in:</b> JavaScript, CSS, HTML, React, Django, Git, SQL</div>
+                    <div><b>Technical Concepts:</b> Object Oriented Programming, Recursive Programming, Algorithms
+                        and
+                        Data
+                        Structures</div>
+                    <div><b>Web Development:</b> RESTful Routing, CRUD Operations, API Querying, Client-Server
+                        Communication, Single Page Applications (SPAs)</div>
+                </div>
             </div>
 
+            <h1 id="education">Education</h1>
+            <div class="resume-info flex-column" id="education-section">
+                <div class="flex-row justify-between">
+                    <b>Bachelor of Science: Mathematics; Minor: Computer Science</b>
+                    <b>Aug 2021 - May 2025</b>
+                </div>
+                <div class="flex-row justify-between">
+                    <div>Utah State University, College of Science</div>
+                    <div>Logan, UT</div>
+                </div>
+                <ul>
+                    <li>GPA: 4.00 (while working 12-20 hours per week)</li>
+                    <li>College of Science Dean's Scholar</li>
+                    <li>College of Science Outstanding Mathematics Student 2025</li>
+                    <li>Engineers without Borders Publicity Committee Chair (2022-2023)</li>
+                </ul>
 
+            </div>
+
+            <h1 id="work-experience">Work Experience</h1>
+            <div class="resume-info" id="work-experience-section">
+                <div class="flex-row justify-between">
+                    <b>Certified Mathematics Tutor</b>
+                    <b>Aug 2022 - May 2025</b>
+                </div>
+                <div class="flex-row justify-between">
+                    <div>Aggie Math Learning Center</div>
+                    <div>Logan, UT</div>
+                </div>
+                <ul>
+                    <li>Developed and implemented diverse tutoring strategies to effectively support hundreds of
+                        college students in passing core mathematics courses</li>
+                    <li>Maintained comprehensive and current knowledge of the mathematics curriculum across 8
+                        college-level courses</li>
+                    <li>Mentored fellow tutors, providing guidance on complex problems and instructional techniques
+                    </li>
+                    <li>Completed two specialized courses in effective tutoring methods, earning certification as
+                        CRLA Level II Tutor</li>
+                </ul>
+
+                <div class="flex-row justify-between">
+                    <b>Patient Care Coordinator</b>
+                    <b>May - Aug 2023</b>
+                </div>
+                <div class="flex-row justify-between">
+                    <div>Serenity Mental Health Centers</div>
+                    <div>Lehi, UT</div>
+                </div>
+                <ul>
+                    <li>Coordinated care for 1000+ patients by resolving a variety of issues including new patient
+                        intakes, scheduling appointments, assessing medication side effects, and billing inquiries
+                    </li>
+                    <li>Adapted to a dynamic work environment with constantly changing demands while prioritizing
+                        tasks efficiently</li>
+                </ul>
+                <div class="flex-row justify-between">
+                    <b>Undergraduate Researcher</b>
+                    <b>May - Aug 2022</b>
+                </div>
+                <div class="flex-row justify-between">
+                    <div>University of Utah</div>
+                    <div>Salt Lake City, UT</div>
+                </div>
+                <ul>
+                    <li>Contributed to research that resulted in the publication of 2 peer-reviewed papers by
+                        assisting in designing and executing experiments, ensuring complete and accurate data
+                        collection
+                    </li>
+                    <li>Compiled and analyzed data, presenting findings at an undergraduate research conference</li>
+                </ul>
+
+            </div>
+
+            <h1 id="volunteer">Volunteer/Leadership</h1>
+            <div class="resume-info" id="leadership-section">
+                <div class="flex-row justify-between">
+                    <b>Publicity Committee Chair</b>
+                    <b>Aug 2021 - Dec 2023</b>
+                </div>
+                <div class="flex-row justify-between">
+                    <div>Engineers Without Borders</div>
+                    <div>Logan, UT</div>
+                </div>
+                <ul>
+                    <li>Led recruitment events and assisted with marketing strategies to support fundraising goals,
+                        including developing materials to present to potential and existing donors</li>
+                    <li>Designed professional flyers and posters to promote the club and attract new members</li>
+                    <li>Handled all of the club's graphic design needs</li>
+                </ul>
+            </div>
         </div>
-
     </div>
 
 </body>

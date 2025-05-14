@@ -96,6 +96,12 @@ input, select {
     margin-right: 8px;
 }
 
+a {
+    color: var(--dark-color)
+}
+
+
+
 .flex-row {
     display: flex;
     flex-direction: row;

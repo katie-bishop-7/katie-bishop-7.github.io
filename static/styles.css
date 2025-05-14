@@ -66,22 +66,35 @@ h1 {
     justify-content: center;
     font-family: DM_Serif;
     align-items: center;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    padding-left: 0;
+    margin-left: 0;
 }
+
+@media (max-width: 767px) {
+    #menu-buttons {
+        justify-content:flex-start;
+    }
+  }
 
 button {
     font-family: DM_Serif;
+    background-color: var(--secondary-color);
     border-style: hidden;
     border-radius: 20px;
     padding: 4px 16px 4px 16px;
     margin: 8px 3px 8px 3px;
+    overflow:visible;
+    word-wrap: unset;
 }
+
+.menu-buttons > *:first-child {
+    margin-left: 0;
+  }
 
 button.active {
     background-color: var(--light-text);
-}
-
-button{
-    background-color: var(--secondary-color);
 }
 
 form {
@@ -136,17 +149,24 @@ a {
     flex-direction: column;
 }
 
+.flex-row-container {
+    flex-wrap: wrap;
+}
+
 #paper {
     margin-top: 115px;
-    margin-left: 24px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 72px;
     padding: 16px 16px 32px 16px;
-    width: 80%;
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
     height: auto;
     background-color: var(--background-color);
     border-radius: 20px;
-    color: var(--dark-color)
-}
+    color: var(--dark-color);
+  }
 
 .resume-info {
     font-family: Hind;
@@ -162,6 +182,10 @@ ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.about-me {
+    margin: 4px;
 }
 
 /* #education-section {
@@ -227,10 +251,8 @@ img {
     justify-content: space-between;
 }
 
-#about-me-container {
-    margin: 4px;
-}
 
 #bio-container {
     margin-bottom: 16px;
+    max-width: 500px;
 }

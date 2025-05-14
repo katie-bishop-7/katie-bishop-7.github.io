@@ -76,6 +76,10 @@ h1 {
         overflow: scroll;
         justify-content:flex-start;
     }
+    #paper {
+        margin-left: auto;
+        margin-right: auto;
+    }
   }
 
 button {
@@ -155,8 +159,8 @@ a {
 
 #paper {
     margin-top: 115px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 24px;
+    margin-right: 24px;
     margin-bottom: 72px;
     padding: 16px 16px 32px 16px;
     width: 90%;

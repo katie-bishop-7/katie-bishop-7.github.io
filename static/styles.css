@@ -64,8 +64,7 @@ a {
 }
 
 button {
-    margin: 8px 3px 8px 3px;
-    padding: 4px 16px 4px 16px;
+    padding: 4px 14px;
     
     font-family: DM_Serif;
     background-color: var(--button-background-default);
@@ -74,6 +73,11 @@ button {
     overflow: visible;
     cursor: pointer;
     word-wrap: unset;
+    white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 button.active {
@@ -84,7 +88,13 @@ button:hover:not(.active) {
     background-color: var(--button-background-hover);
 }
 
+button:first-of-type {
+    margin-left: 8px;
+}
 
+button:last-of-type {
+    margin-right: 8px;
+}
 
 
 
@@ -98,6 +108,7 @@ button:hover:not(.active) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 100;
 }
 
 #menu-buttons {
@@ -106,8 +117,10 @@ button:hover:not(.active) {
     font-family: DM_Serif;
     align-items: center;
     flex-wrap: nowrap;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 0;
-    margin-left: 0;
+    gap: 6px;
 }
 
 #container{
@@ -125,22 +138,18 @@ button:hover:not(.active) {
     background: var(--grain),
     radial-gradient(93.34% 60.55% at 32.45% -7.38%,var(--gradient-primary-color) 0%,var(--gradient-primary-color) 27%,transparent 100%),radial-gradient(68.72% 41.68% at 101.23% 82.61%,var(--gradient-quaternary-color) 0%,var(--gradient-quaternary-color) 22%,transparent 100%),radial-gradient(67.52% 69.09% at -11.58% 101.98%,var(--gradient-tertiary-color) 0%,var(--gradient-tertiary-color) 30%,transparent 100%),radial-gradient(95.64% 33.74% at 118.43% 79.52%,var(--gradient-primary-color) 0%,var(--gradient-primary-color) 22%,transparent 100%),radial-gradient(68.73% 33.08% at 0.53% -4.51%,var(--gradient-primary-color) 0%,var(--gradient-primary-color) 22%,transparent 100%),radial-gradient(55.90% 58.63% at 100.46% 92.95%,var(--gradient-secondary-color) 0%,var(--gradient-secondary-color) 25%,transparent 100%),linear-gradient(309.00deg,var(--gradient-primary-color) 0%,61.8%,transparent 100%);
     background-blend-mode: overlay,normal,hard-light,soft-light,hard-light,normal,normal;
-    z-index: -2;
 }
 
-#paper {
-    margin-top: 115px;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 72px;
+#page {
+    margin: 115px 8rem;
     padding: 16px 16px 32px 16px;
-    width: 80%;
+    width: auto;
     max-width: 1600px;
     box-sizing: border-box;
     height: auto;
     border-radius: 0 0 20px 20px;
     color: var(--dark-color);
-    z-index: -1;
+    z-index: 2;
     background: var(--grain), linear-gradient(var(--background-color));
 }
 
@@ -153,10 +162,6 @@ button:hover:not(.active) {
 }
 
 
-#bio-container {
-    margin-bottom: 16px;
-    max-width: 500px;
-}
 
 .glass {
   background: rgba(255, 255, 255, 0.28);
@@ -220,13 +225,14 @@ ul {
 
 #about-me-section {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
 }
 
 .about-me {
     margin: 4px;
 }
+
 
 
 .image-div {
@@ -243,8 +249,8 @@ ul {
 
 #profile-picture {
     width: 13rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 10rem;
+    height: 13rem;
+    border-radius: 20rem;
     object-fit: cover;
 
 }
@@ -286,18 +292,24 @@ img {
 
 
 
-@media (max-width: 767px) {
+@media all and (max-width: 900px) {
     #menu-buttons {
         overflow: scroll;
         justify-content: flex-start;
     }
 
-    #paper {
-        margin-left: auto;
-        margin-right: auto;
+    #page {
+        margin: 115px 2rem;
     }
 
     .flex-row {
         gap: 0;
+    }
+}
+
+@media all and (max-width: 800px) {
+    #about-me-section {
+        flex-direction: column;
+        align-items: center;
     }
 }

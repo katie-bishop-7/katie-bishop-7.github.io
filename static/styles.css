@@ -299,11 +299,17 @@ img {
     }
 
     #page {
-        margin: 115px 2rem;
+        margin: 115px 2rem 2rem 2rem;
+        padding: 12px 12px 32px 2px;
     }
 
     .flex-row {
         gap: 0;
+        flex-direction: column;
+    }
+
+    ul {
+        padding-inline-start: 30px;
     }
 }
 

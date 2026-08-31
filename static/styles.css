@@ -135,6 +135,7 @@ button:last-of-type {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    text-wrap: pretty;
 }
 
 #background {
@@ -150,7 +151,7 @@ button:last-of-type {
     margin: 115px 8rem;
     padding: 16px 16px 32px 16px;
     width: auto;
-    max-width: 1600px;
+    max-width: 1000px;
     box-sizing: border-box;
     height: auto;
     border-radius: 0 0 20px 20px;

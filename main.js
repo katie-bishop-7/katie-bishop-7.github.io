@@ -14,8 +14,22 @@ const education_section = document.getElementById("education")
 const work_experience_section = document.getElementById("work-experience")
 const volunteer_section = document.getElementById("volunteer")
 
-const buttons = [contact_info_button, projects_button, skills_button, education_button, work_experience_button, volunteer_button]
-const sections = [about_me_section, project_section, skills_section, education_section, work_experience_section, volunteer_section]
+const buttons = [
+  contact_info_button, 
+  work_experience_button, 
+  education_button, 
+  skills_button, 
+  projects_button, 
+  volunteer_button
+]
+const sections = [
+  about_me_section, 
+  work_experience_section, 
+  education_section, 
+  skills_section, 
+  project_section, 
+  volunteer_section
+]
 
 // add an event listener to the window so that when you scroll, buttons highlight
 window.addEventListener('scroll', () => {
